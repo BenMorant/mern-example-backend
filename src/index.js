@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+import RestaurantsDAO from './dao/restaurantsDAO.js'
 /* eslint-disable no-console */
 import app from './server.js'
 import dotenv from 'dotenv'
@@ -18,6 +18,7 @@ MongoClient.connect(process.env.RESTREVIEWS_DB_URI, {
     process.exit(1)
   })
   .then(async client => {
+    await RestaurantsDAO.injectDB(client)
     app.listen(port, () => {
       console.log(`http://localhost:${port}/`)
     })
