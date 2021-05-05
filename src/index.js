@@ -1,4 +1,5 @@
 import RestaurantsDAO from './dao/restaurantsDAO.js'
+import ReviewsDAO from './dao/reviewsDAO.js'
 /* eslint-disable no-console */
 import app from './server.js'
 import dotenv from 'dotenv'
@@ -19,6 +20,7 @@ MongoClient.connect(process.env.RESTREVIEWS_DB_URI, {
   })
   .then(async client => {
     await RestaurantsDAO.injectDB(client)
+    await ReviewsDAO.injectDB(client)
     app.listen(port, () => {
       console.log(`http://localhost:${port}/`)
     })
