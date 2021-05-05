@@ -1,0 +1,33 @@
+{
+  "name": "mern-example-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-fix": "eslint --fix src/*"
+  },
+  "keywords": [],
+  "author": "Ben Mor",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "7.13.14",
+    "eslint-plugin-prettier": "3.4.0",
+    "@babel/core": "7.14.0",
+    "@babel/node": "7.13.13",
+    "@babel/preset-env": "7.14.0",
+    "eslint": "7.25.0",
+    "eslint-config-prettier": "8.3.0",
+    "nodemon": "2.0.7",
+    "prettier": "2.2.1"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "bson": "4.3.0",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "mongodb": "3.6.6"
+  }
+}

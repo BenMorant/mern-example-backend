@@ -1,0 +1,33 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "eqeqeq": "error",
+    "no-console": "error",
+    "no-alert": "error",
+    "no-bitwise": "error",
+    "no-duplicate-imports": "error",
+    "no-else-return": "error",
+    "no-self-compare": "error",
+    "no-shadow": "error",
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "prettier/prettier": ["error"]
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js"]
+    }
+  ]
+}
